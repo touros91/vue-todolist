@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+    <title>Vue To Do List</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Font -->
@@ -24,7 +24,6 @@
                 <input type="text" placeholder="Nuovo Todo" v-model="newTodo">
                 <button @click="addNewTodo()">Aggiungi</button>
             </div>
-            
         </header>
 
         <main>
@@ -32,8 +31,12 @@
                 <div class="list-container">
                     <ul>
                         <li v-for="(todo, index) in todos" :key="index">
-                            {{todo}}
-                            <i class="fas fa-times" @click="removeTodo(index)"></i>
+                            <span :class='todos[index].status ? "done" : "not-done"'>{{todo.task}}</span>
+                            <div class="btnAndicons">
+                                <button @click="done(index)" id="fatto">Fatto</button> 
+                                <button>Modifica</button>
+                                <i class="fas fa-times" @click="removeTodo(index)"></i>
+                            </div>
                         </li>
                     </ul>
                 </div>
