@@ -36,6 +36,7 @@ const app = new Vue(
                         status: false
                         }
                     );
+                    this.newTodo = "";
                 }
             },
             removeTodo: function(index){
