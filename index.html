@@ -21,7 +21,7 @@
                 <img src="img/logo.png" alt="Logo Boolean">
             </div>
             <div class="addToList">
-                <input type="text" placeholder="Nuovo Todo" v-model="newTodo">
+                <input type="text" placeholder="Nuovo Todo" v-model="newTodo" @keyup.enter="addNewTodo()">
                 <button @click="addNewTodo()">Aggiungi</button>
             </div>
         </header>
