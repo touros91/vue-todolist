@@ -1,0 +1,55 @@
+/* Reset  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common  */
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 60%;
+    margin: auto;
+}
+
+/* header  */
+
+header {
+    padding: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.addToList {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* main  */
+
+ul {
+    background-color: rgb(231, 231, 231);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px 0;
+    border-bottom: 1px solid grey;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
