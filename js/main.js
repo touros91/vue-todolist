@@ -23,14 +23,6 @@ const app = new Vue(
                 {
                     task: "Fare la torta",
                     status: false
-                },
-                {
-                    task: "Fare le pulizie",
-                    status: false
-                },
-                {
-                    task: "Fare il bucato",
-                    status: false
                 }
             ],
             newTodo: ""
