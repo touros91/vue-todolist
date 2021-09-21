@@ -31,10 +31,9 @@
                 <div class="list-container">
                     <ul>
                         <li v-for="(todo, index) in todos" :key="index">
-                            <span :class='todos[index].status ? "done" : "not-done"'>{{todo.task}}</span>
+                            <span :class='todo.status ? "done" : "not-done"'>{{todo.task}}</span>
                             <div class="btnAndicons">
-                                <button @click="done(index)" id="fatto">Fatto</button> 
-                                <button>Modifica</button>
+                                <button v-if="todo.status == false" @click="done(index)">Fatto</button>
                                 <i class="fas fa-times" @click="removeTodo(index)"></i>
                             </div>
                         </li>

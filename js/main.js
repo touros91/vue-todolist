@@ -14,7 +14,7 @@ const app = new Vue(
             todos: [
                 {
                     task: "Fare gli esercizi",
-                    status: false
+                    status: true
                 },
                 {
                     task: "Fare la spesa",
